@@ -16,4 +16,4 @@ const productSchema = new mongoose.Schema({
         default:'in_stock'
     },
 },{timestamps:true})
-module.exports=mongoose.model(product,productSchema)
+module.exports=mongoose.model('product',productSchema)
