@@ -3,13 +3,13 @@ const PORT =8080
 const app =express()
 const bodyParser= require('body-parser')
 const API_Route =require('./routes')
-
+const cors =require('cors')
 require('./db_init');
 
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-
+app.use(cors())
 app.get('/',(req,res,next)=>{
     res.send('Welcome to e-commerce site')
 })

@@ -12,8 +12,8 @@ const productSchema = new mongoose.Schema({
     created_by: String,
     status:{
         type:String,
-        enum:['in_stock','out-of-stock'],
-        default:'in_stock'
+        required:true
+        
     },
 },{timestamps:true})
 module.exports=mongoose.model('product',productSchema)
